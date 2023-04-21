@@ -412,14 +412,14 @@ func (t *Txn) delete(node Node, search []byte) (Node, bool) {
 
 		var notEmpty bool
 
-		for , i := range n.children {
+		for edge, i := range n.children {
 			if i != nil {
 				if indx != -1 {
 					notEmpty = true
 
 					break
 				} else {
-					indx = 
+					indx = edge
 				}
 			}
 		}
